@@ -27,9 +27,9 @@ In this Blueprint we create a incident using REST-API integration.
 
 There are 2 parts to this setup
 
-1. App registration (Registering an App in Active Directory). Please follow [these instructions](https://d365demystified.com/2022/03/06/setup-postman-to-connect-to-dynamics-365-crm-using-oauth-2-0-azure-app-registration/), section *Register an App in Azure* (name the app 'Onify Web API` instead)
+1. App registration (Registering an App in Active Directory). Please follow [these instructions](https://d365demystified.com/2022/03/06/setup-postman-to-connect-to-dynamics-365-crm-using-oauth-2-0-azure-app-registration/), section *Register an App in Azure* ( name the app `Onify Web API` instead ;-) )
 2. Add CRM application user
-   1. Go to `https://admin.powerplatform.microsoft.com/environments/<ENVIRONMENTID>/appusers` (where `ENVIRONMENTID`) is your Dynamics 365 environment
+   1. Go to `https://admin.powerplatform.microsoft.com/environments/<ENVIRONMENTID>/appusers` (where `<ENVIRONMENTID>` is your Dynamics 365 CRM environment id)
    2. Add your newly created app as a app user (and add appropriate security roles)
 
 ### Onify
