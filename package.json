@@ -1,5 +1,5 @@
 {
-  "name": "@onify/blueprint-dynamics-365-customer-service-create-ticket",
+  "name": "@onify/blueprint-dynamics-365-customer-service-create-incident",
   "version": "0.0.1",
   "description": "Onify Blueprint: Create incident in Dynamics 365 Customer Service",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onify/blueprint-dynamics-365-customer-service-create-ticket.git"
+    "url": "git+https://github.com/onify/blueprint-dynamics-365-customer-service-create-incident.git"
   },
   "keywords": [
     "onify",
@@ -22,7 +22,7 @@
     "url": "https://github.com/onify"
   },
   "license": "MIT",
-  "homepage": "https://github.com/onify/blueprint-dynamics-365-customer-service-create-ticket#readme",
+  "homepage": "https://github.com/onify/blueprint-dynamics-365-customer-service-create-incident#readme",
   "devDependencies": {
     "@onify/flow-validator": "^0.0.3",
     "chai": "^4.3.4",

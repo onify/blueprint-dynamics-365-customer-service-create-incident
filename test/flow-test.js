@@ -5,7 +5,7 @@ const {expect} = require('chai');
 describe('flow', () => {
   let validator;
   before(async () => {
-    const source = await fs.readFile('./dynamics-365-customer-service-create-ticket.bpmn');
+    const source = await fs.readFile('./dynamics-365-customer-service-create-incident.bpmn');
     validator = FlowValidator(source);
   });
 
