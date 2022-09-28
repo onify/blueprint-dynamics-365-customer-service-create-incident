@@ -22,9 +22,6 @@
     "url": "https://github.com/onify"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/onify/blueprint-dynamics-365-customer-service-create-ticket/issues"
-  },
   "homepage": "https://github.com/onify/blueprint-dynamics-365-customer-service-create-ticket#readme",
   "devDependencies": {
     "@onify/flow-validator": "^0.0.3",
@@ -32,8 +29,5 @@
     "cron": "^2.1.0",
     "eslint": "^8.2.0",
     "mocha": "^10.0.0"
-  },
-  "files": [
-    "blueprint-dynamics-365-customer-service-create-ticket.bpmn"
-  ]
+  }
 }

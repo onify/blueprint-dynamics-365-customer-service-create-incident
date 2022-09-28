@@ -5,7 +5,9 @@
 
 # Onify Blueprint: Create incident in Dynamics 365 Customer Service
 
-[Dynamics 365 Customer Service](https://dynamics.microsoft.com/customer-service/overview/) ...
+[Microsoft Dynamics 365 Customer Service](https://dynamics.microsoft.com/customer-service/overview/) is a module for customer service automation that streamlines case and knowledge management, enables personalized customer service with a 360-degree customer view, and provides visibility into customer service department performance with dashboards and reports.
+
+In this Blueprint we create a incident using REST-API integration.
 
 ![Onify Blueprint: Create incident in Dynamics 365 Customer Service](blueprint.jpg "Blueprint")
 
@@ -21,19 +23,32 @@
 
 ## Setup
 
-### Microsoft Azure
+### Microsoft
 
-...
+There are 2 parts to this setup
+
+1. App registration (Registering an App in Active Directory). Please follow [these instructions](https://d365demystified.com/2022/03/06/setup-postman-to-connect-to-dynamics-365-crm-using-oauth-2-0-azure-app-registration/), section *Register an App in Azure* (name the app 'Onify Web API` instead)
+2. Add CRM application user
+   1. Go to `https://admin.powerplatform.microsoft.com/environments/<ENVIRONMENTID>/appusers` (where `ENVIRONMENTID`) is your Dynamics 365 environment
+   2. Add your newly created app as a app user (and add appropriate security roles)
 
 ### Onify
 
-...
+Add the following settings.
+
+|Key|Name|Value|Type|Tag|Role|
+|---|----|-----|----|---|----|
+|azure_credentials|Microsoft Azure credentials|``` { "tenant": "<TENANTID>", "client_id": "<CLIENTID>",	"client_secret": "<CLIENTSECRET>"}```|object|dynamics365, frontend|admin|
+|dynamics365_url|Dynamics 365 CRM url|`https://<ORGID>.<CRMNR>.dynamics.com`|string|dynamics365, frontend|admin|
+
+> Note: Creating settings via admin interface add a trailing `_` in key. This is required for flow to work.
 
 ## Test
 
 1. Open the BPMN diagram in Camunda Modeler.
-2. Deploy the BPMN diagram (click `Deploy current diagram` and follow the steps).
-3. Run it (click `Start current diagram`).
+2. Update `customerid_account@odata.bind` value in the `Create incident` task
+3. Deploy the BPMN diagram (click `Deploy current diagram` and follow the steps).
+4. Run it (click `Start current diagram`).
 
 ## Support
 
